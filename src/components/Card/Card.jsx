@@ -7,8 +7,8 @@ export default function Card(props) {
     <div className="card">
       <h2>{item.name}</h2>
 
-      {item.tag.map(function(tag){
-        return <Tag tag={tag} />
+      {item.tags?.map(function(tag){
+        return <Tag tag={tag} key={`tag_${tag}`} />
       })}
       
       <img src={item.image} />
